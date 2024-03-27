@@ -39,18 +39,18 @@ botoesGorjeta.forEach(botao => {
 function ReceberPorcentagem(evento) {
     botoesGorjeta.forEach(botao=> {
         botao.classList.remove("botao-ativo")
+
         if(botao.value === evento.target.value) {
             botao.classList.add("botao-ativo")
         }
     })
-   
+
     if(evento.target.value !== "") {
         porcentagem = parseFloat(evento.target.value) / 100
     }
     else {
         porcentagem =0
     }
-   
     calcular()
 }
 
@@ -61,7 +61,7 @@ function calcular() {
     if(conta !== 0 && porcentagem !== 0 && pessoas !== 0) {
         const strongGorjetaTotal = document.querySelector(".gorjeta-total > strong")
         strongGorjetaTotal.innerHTML = `R$ ${(conta * porcentagem / pessoas).toFixed(2)}`
-
+        
         const strongTotal = document.querySelector(".total > strong")
         strongTotal.innerHTML = `R$ ${((conta + (conta * porcentagem)) / pessoas).toFixed(2)}`
     }
@@ -83,5 +83,8 @@ function limpar() {
 
     document.querySelector(".gorjeta-total > strong").innerHTML = "R$ 0.00"
     document.querySelector(".total > strong").innerHTML = "R$ 0.00"
-
+    
+    conta = 0
+    porcentagem = 0
+    pessoas = 0
 }

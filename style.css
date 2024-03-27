@@ -19,7 +19,6 @@
     --green-hover: #9fe8df;
     --danger: #e17457;
 }
-
 body {
     background-color: var(--green-200);
 }
@@ -36,8 +35,8 @@ main {
     border-radius: 1.5625rem 1.5625rem 0 0 ;
 }
 
-.gorjeta,
-.pessoas {
+.conta,
+.gorjeta {
     margin-bottom: 2rem;
 }
 
@@ -144,13 +143,14 @@ main {
     display: none;
 }
 
+
 .resultados {
     background-color: var(--green-800);
     border-radius: 0.9375rem;
     padding: 1.5rem;
 }
 
-resultados div div {
+.resultados div div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,6 +223,7 @@ resultados div div {
     main section {
         width: 100%;
     }
+
 
     .gorjeta div {
         grid-template-columns: 1fr 1fr 1fr;
